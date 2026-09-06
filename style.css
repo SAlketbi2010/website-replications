@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Hooskai Chamfered Square';
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 43px 30px;
+}
+
+.morebutton {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 10px;
+    background-color: white;
+    border-style: hidden;   
+    border-radius: 5px;
+    margin: 43px 30px;
+}
+.morebutton i {
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+}
+
+.titlecard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: hidden;
+    border-radius: 20px;
+    background-image: url(9f86f195892b6f3b797f8a7ad13ffff6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.titlecard p {
+    margin: 185px;
+    color: white;
+    font-weight: bold;
+    font-size: 75px;
+}
+
+.principles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 120px 40px;
+}
+
+.principlestitlecard {
+    border-style: hidden;
+    border-radius: 5px;
+    background-color: rgb(237, 236, 236);
+    padding: 5px;
+}
+
+.principlestitlecard p{
+    margin: 0;
+    color: grey;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.principlestext {
+    font-size: 36px;
+    font-weight: 500;
+    width: 610px;
+}
+
+.highlight {
+    font-size: 36px;
+    font-weight: 500;
+    width: 700px;
+    color: rgb(141, 140, 140)
+}
+
+.principlescards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.principlescard1, .principlescard2, .principlescard3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    background-color: white;
+    padding: 32px;
+    margin-right: 10px;
+    height: 320px;
+
+}
+
+.principlescard1 h1, .principlescard2 h1, .principlescard3 h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.principlescard1 p, .principlescard2 p, .principlescard3 p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(115, 115, 115);
+}
+
+.principlescard1logo , .principlescard2logo , .principlescard3logo  {
+    display: flex;
+    flex-direction: row;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    border-style: hidden;
+    border-radius: 13px;
+    padding: 15px;
+}
+
+.principlescard1 i, .principlescard2 i, .principlescard3 i {
+    font-size: 25px;
+    color: white;
+}
+
