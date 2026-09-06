@@ -74,7 +74,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 120px 40px;
+    padding: 120px 80px;
 }
 
 .principlestitlecard {
@@ -108,18 +108,21 @@ main {
 .principlescards{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
+    gap: 10px;
 }
 
 .principlescard1, .principlescard2, .principlescard3 {
     display: flex;
     flex-direction: column;
+    border-style: hidden;
+    border-radius: 20px;
     justify-content: space-between;
     align-items: space-between;
     background-color: white;
     padding: 32px;
-    margin-right: 10px;
     height: 320px;
 
 }
@@ -130,6 +133,7 @@ main {
 }
 
 .principlescard1 p, .principlescard2 p, .principlescard3 p {
+    width:500px;
     font-size: 18px;
     font-weight: 500;
     color: rgb(115, 115, 115);
