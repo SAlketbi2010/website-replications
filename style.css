@@ -5,6 +5,7 @@
 body {
     display: flex;
     flex-direction: column;
+    gap: 120px;
     min-height: 100vh;
     margin: 0;
     background-color: #f8f8f8;
@@ -33,11 +34,20 @@ header {
     flex-direction: row;
     background-color: white;
     padding: 10px;
-    background-color: white;
     border-style: hidden;   
     border-radius: 5px;
     margin: 43px 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: all 0.2s ease;
 }
+
+.morebutton:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
 .morebutton i {
     color: black;
 }
@@ -47,6 +57,7 @@ main {
     flex-direction: column;
     flex: 1;
     font-family: Inter;
+    gap: 100px;
     padding: 10px;
 }
 
@@ -57,34 +68,43 @@ main {
     align-items: center;
     border-style: hidden;
     border-radius: 20px;
-    background-image: url(9f86f195892b6f3b797f8a7ad13ffff6.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("13f2a867-349a-45e2-b8e3-4157e7b9d145.jpg");
     background-size: cover;
     background-position: center;
+    aspect-ratio: 21 / 4;
 }
 
 .titlecard p {
     margin: 185px;
     color: white;
-    font-weight: bold;
-    font-size: 75px;
+    font-weight: 500;
+    font-size: 90px;
 }
 
-.principles, .ourteam {
+.principles, .ourteam, .performance, .plancard {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 120px 160px;
+    padding: 0px 105px;
 }
 
-.principlestitlecard, .ourteamtitlecard {
+.ourteam {
+    gap: 10px;
+}
+
+.principlestitlecard, .ourteamtitlecard, .performancetitlecard {
     border-style: hidden;
     border-radius: 5px;
     background-color: rgb(237, 236, 236);
     padding: 5px;
 }
 
-.principlestitlecard p, .ourteamtitlecard p{
+.performancetitlecard{
+    background-color: #232223;
+}
+
+.principlestitlecard p, .ourteamtitlecard p, .performancetitlecard p{
     margin: 0;
     color: grey;
     font-weight: 500;
@@ -122,9 +142,16 @@ main {
     justify-content: space-between;
     align-items: space-between;
     background-color: white;
+    width:100%;
     padding: 32px;
     height: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.principlescard1:hover, .principlescard2:hover, .principlescard3:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .principlescard1 h1, .principlescard2 h1, .principlescard3 h1 {
@@ -179,10 +206,17 @@ main {
     background-size: cover;
     background-position: center;
     padding:32px;
-    width: 500px;
+    width: 100%;
     aspect-ratio: 3 / 4;
     border-style: hidden;
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ourteamcard1:hover, .ourteamcard2:hover, .ourteamcard3:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .ourteamcard1 {
@@ -223,4 +257,375 @@ main {
 
 .ourteamcard3 {
     background-image: url(image\ copy.png);
+}
+
+.join{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    width:100%;
+    background-color: rgb(0 0 0 / 5%);
+    border-style: hidden;
+    border-radius: 20px;
+}
+
+.jointext {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 10px;
+}
+
+.joinmaintext, .joindescriptiontext {
+    margin:0;
+}
+
+.joinmaintext {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.joindescriptiontext {
+    font-size: 16px;
+    opacity: 70%;
+}
+
+.joinbutton{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: black;
+    padding: 13px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.joinbutton:hover {
+    background-color: #333333;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.performance {
+    background-color: #1a1a1a;
+    border-style: hidden;
+    border-radius: 20px;
+    width:100%;
+    padding: 100px 105px;
+    gap: 20px;
+}
+
+.performancetext {
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    width: 400px;
+}
+
+.statcards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.statcard1, .statcard2, .statcard3, .statcard4 {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #232223;
+    border-style: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px #1a1a1a;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statcard1:hover, .statcard2:hover, .statcard3:hover, .statcard4:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px #121212;
+}
+
+.statcard1text, .statcard2text, .statcard3text, .statcard4text {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 32px 32px;
+}
+
+.mainstat1, .mainstat2, .mainstat3, .mainstat4 {
+    margin:0;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+
+.descriptionstat1, .descriptionstat2, .descriptionstat3, .descriptionstat4 {
+    margin:0;
+    color: white;
+    font-size: 20px;
+    opacity: 70%;
+    width: 180px;
+}
+
+.performanceimagecard {
+    background-image: url(876b28d4-61c0-4a53-b2bf-f07af2ca53d6.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    aspect-ratio: 3 / 2;
+    border-style: hidden;
+    border-radius: 20px;
+}
+
+.performanceandplan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plancard{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("7cabbc23-6957-4c79-a6a6-7378a6301b66.png");
+    background-size: cover;
+    background-position: center;
+    border-style: hidden;
+    border-radius: 20px;
+    width:100%;
+    aspect-ratio: 19 / 6;
+    padding: 64px 32px 64px 160px;
+}
+
+.plancardleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.plancardlefttext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo1 {
+    font-family: 'Hooskai Chamfered Square';
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+.plancardtext {
+    color: white;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 0;
+    width: 350px;
+}
+
+.plancardtitles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 360px;
+}
+
+.cardtitle1, .cardtitle2, .cardtitle3, .cardtitle4 {
+    border-style: hidden;
+    border-radius: 5px;
+    background-color: rgba(143, 143, 143, 0.4);
+    padding: 5px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.cardtitle1:hover, .cardtitle2:hover, .cardtitle3:hover, .cardtitle4:hover {
+    background-color: rgba(143, 143, 143, 0.6);
+}
+
+.cardtitle1 p, .cardtitle2 p, .cardtitle3 p, .cardtitle4 p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.plancardright{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 360px;
+    margin-left: auto;
+}
+
+.plancardright p{
+    color: white;
+    font-size: 17px;
+}
+
+.plancardright button {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: white;
+    padding: 13px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.plancardright button:hover {
+    background-color: #e5e5e5;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.infodiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 105px;
+    background-color: #f8f8f8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+}
+
+.focustext {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 12px 0;
+}
+
+.focusdescription {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0 0 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.explore, .company, .legal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exploretitle, .companytitle, .legaltitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin: 0 0 4px 0;
+}
+
+.explore p:not(.exploretitle), 
+.company p:not(.companytitle), 
+.legal p:not(.legaltitle) {
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.6;
+    margin: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.explore p:not(.exploretitle):hover, 
+.company p:not(.companytitle):hover, 
+.legal p:not(.legaltitle):hover {
+    opacity: 1;
+    color: black;
+}
+
+.subclasses {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-right: 100px;
+}
+
+.logomarquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.marqueetext {
+    display: inline-block;
+    font-family: 'Hooskai Chamfered Square', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    animation: scroll-right 10s linear infinite;
+    margin: 0;
+}
+
+@keyframes scroll-right {   
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+footer {
+    font-family: Inter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px 105px;
+
 }
