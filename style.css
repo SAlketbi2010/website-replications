@@ -46,8 +46,8 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 12px;
+    font-family: Inter;
+    padding: 10px;
 }
 
 .titlecard {
@@ -69,22 +69,22 @@ main {
     font-size: 75px;
 }
 
-.principles {
+.principles, .ourteam {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 120px 80px;
+    padding: 120px 160px;
 }
 
-.principlestitlecard {
+.principlestitlecard, .ourteamtitlecard {
     border-style: hidden;
     border-radius: 5px;
     background-color: rgb(237, 236, 236);
     padding: 5px;
 }
 
-.principlestitlecard p{
+.principlestitlecard p, .ourteamtitlecard p{
     margin: 0;
     color: grey;
     font-weight: 500;
@@ -133,7 +133,7 @@ main {
 }
 
 .principlescard1 p, .principlescard2 p, .principlescard3 p {
-    width:500px;
+    width:450px;
     font-size: 18px;
     font-weight: 500;
     color: rgb(115, 115, 115);
@@ -157,3 +157,70 @@ main {
     color: white;
 }
 
+.ourteamtext {
+    font-size: 36px;
+    font-weight: 500;
+    width: 500px;
+}
+
+.ourteamcards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.ourteamcard1, .ourteamcard2, .ourteamcard3 {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    background-size: cover;
+    background-position: center;
+    padding:32px;
+    width: 500px;
+    aspect-ratio: 3 / 4;
+    border-style: hidden;
+    border-radius: 20px;
+}
+
+.ourteamcard1 {
+    background-image: url(image.png);
+}
+
+.ourteamcard1text, .ourteamcard2text, .ourteamcard3text {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.ourteamcard1text p, .ourteamcard2text p, .ourteamcard3text p {
+    margin: 0;
+}
+
+.ourteamcard1name, .ourteamcard2name, .ourteamcard3name {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.ourteamcard1occupation, .ourteamcard2occupation, .ourteamcard3occupation {
+    color: white;
+    opacity: 80%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.ourteamcard2{
+    background-image: url(imagecopy.png);
+}
+
+.ourteamcard3 {
+    background-image: url(image\ copy.png);
+}
